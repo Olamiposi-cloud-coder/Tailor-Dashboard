@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finance Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo">
+      <select name="user" id="user" onchange="navigateToLink()">
+        <option value="">Select an option</option>
+        <option value="tailor">Non-Vetted Tailor</option>
+        <option value="apply">Apply to be a VETTED Tailor</option>
+      </select>
+    </div>
+    <ul class="main-menu">
+        <li><a href="#" data-section="measurement"><img src="./Images/Group 4128.png"alt=""><span>Measurement</span></a></li>
+        <li><a href="#" data-section="orders"><img src="./Images/Group 4130.png" alt=""><span>Orders</span></a></li>
+        <li><a href="#" data-section="products"><img src="./Images/Vector 113.png" alt=""><span>Product</span></a></li>
+        <li><a href="#" data-section="customers"><img src="./Images/Group 4129.png" alt=""><span>Customers</span></a></li>
+        <li class="active"><a href="#" data-section="profile"><img src="./Images/user.png" alt=""><span>My Profile</span></a></li>
+        <li class="logout"><a href="#" data-section="logout"><img src="./Images/Group 6593.svg" alt=""><span>Logout</span></a></li>
+    </ul>
+  </div>
+
+  <div class="main-content">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <img src="./Images/arrow.svg" alt="arrow-icon">
+            <h3>My Profile</h3>
+        </div>
+        <div class="user-info">
+            <div>
+            <img src="./Images/Notification 2.svg" alt="Notification-icon"> 
+            </div>
+             <span class="icon">OS</span>     
+        </div>
+    </div>
+
+     <div class="application-form">
+      <div class="form-header">
+        <h3>Vetted Tailor Application</h3>
+        <p class="heading-2">One step closer to the goal! please provide us with your Bank details with which you will be receiving payment.</p>
+      </div>
+        <div class="form-container">
+          <div class="user-details">
+            <img src="./Images/pexels-photo-2332413.png" alt="user-image">
+            <p>Name:<span>Samuel Oladokun</span></p>
+            <p>Gender:<span>Male</span></p>
+            <p>Sew Gender:<span>Both</span></p>
+            <p>Phone Number:<span>08137901372</span></p>
+            <p>Email Address:<span>biola@fitted.ng</span></p>
+            <p>Store Name:<span>Skibi Fashion House</span> </p>
+            <p>Location:<span>Lagos, Nigeria</span></p>
+          </div>
+
+          <div class="form-input">
+            <div class="select-input">
+              <div class="select-row">
+                <label for="gender">Gender you Sew for?</label>
+                <select name="gender" id="gender">
+                  <option value="male">Please select</option>
+                  <option value="female">Female</option>
+                  <option value="other">Male</option>
+                </select>
+              </div>
+              <div class="select-row">
+                <label for="style">Styles you Sew?</label>
+                <select name="style" id="style" placeholder="Please select">
+                  <option value="male">Please select</option>
+                  <option value="female">Female</option>
+                  <option value="other">Male</option>
+                </select>
+              </div>
+            </div>
+
+            <label for="text">Bank Name</label>
+            <input type="text" name="text" id="bankName" placeholder="Please select your bank">
+            <label for="number">Account Number</label>
+            <input type="number" name="number" id="accountNumber" placeholder="Please input your account number">
+            <label for="text">Account Name</label>
+            <input type="text" name="text" id="accountName">
+            <div class="error-message" id="error-message"></div>
+            <button onclick="fetchAccountDetails()">Submit Application</button>
+          </div>
+        </div>
+     </div>
+  </div>
+    
+  <script src="script.js"></script>
+</body>
+</html>
